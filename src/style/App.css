@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+:root {
+  --primary-color: rgb(43, 56, 86);
+  --secondary-color: rgb(46, 83, 153);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/*Navigation*/
+nav {
+  padding: 10px;
+  background-color: var(--primary-color);
+  list-style-type: none;
+  text-align: center;
+}
+
+#shopping-logo {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  margin: 3px;
+  font-size: 25px;
+}
+
+.shopping-logo-name {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/*Main*/
+.Main {
+  height: 73vh;
+}
+
+/*Shopping Cart*/
+.ShoppingCart {
+  overflow: auto;
+  width: 50%;
+  max-height: 420px;
+  margin: 20px auto;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.ShoppingInput {
+  background-color: white;
+  border-radius: 5px;
+  border: solid 5px var(--secondary-color);
+  padding: 5px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ShoppingItems {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+  border: solid 5px var(--secondary-color);
+  margin: 5px 0;
+}
+
+.item-name {
+  display: inline-block;
+  width: 150px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.item-price {
+  display: inline-block;
+  width: 100px;
+  font-size: 20px;
+  text-align: right;
+}
+
+.increment,
+.decrement {
+  width: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  height: 100%;
+  color: var(--primary-color);
+  border-radius: 50%;
+  border: solid 2px var(--primary-color);
+  background-color: white;
+  cursor: pointer;
+}
+
+.item-quantity {
+  display: inline-block;
+  width: 40px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.item-subtotal {
+  display: inline-block;
+  width: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+}
+
+#add-button {
+  border: none;
+  background-color: white;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-size: 25px;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+#add-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+input {
+  width: 300px;
+  padding: 2px 5px;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+}
+
+.ShoppingTotal {
+  border-top: 2px solid white;
+  padding-top: 10px;
+  margin-top: 10px;
+  text-align: right;
+  color: white;
+}
+
+/*Footer section*/
+footer {
+  height: 10%;
+  display: flex;
+  background-color: var(--primary-color);
+  padding: 0 10px;
+  color: white;
+}
+
+.footer-content {
+  padding: 15px 0;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
