@@ -106,7 +106,7 @@ nav {
 
 .item-subtotal {
   display: inline-block;
-  width: 100px;
+  width: 120px;
   font-size: 20px;
   font-weight: bold;
   text-align: right;
@@ -127,6 +127,23 @@ nav {
 #add-button:hover {
   background-color: var(--primary-color);
   color: white;
+}
+
+.delete-button {
+  height: 100%;
+  width: 30px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+#delete-logo {
+  font-size: 25px;
+  color: red;
+}
+
+#delete-logo:hover {
+  font-weight: bold;
 }
 
 input {

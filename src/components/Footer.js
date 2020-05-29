@@ -9,7 +9,7 @@ class Footer extends Component {
         <div className="footer-content">
           <h1>React Shopping Cart</h1>
           <h3>Date started: May 27, 2020</h3>
-          <h3>Date ended:</h3>
+          <h3>Date ended: May 29, 2020</h3>
         </div>
       </footer>
     );

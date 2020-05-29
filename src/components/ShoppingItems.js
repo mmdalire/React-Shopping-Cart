@@ -34,8 +34,14 @@ class ShoppingItems extends Component {
     const { name, quantity, price, subtotal } = this.state;
     return (
       <div className="ShoppingItems">
+        <button
+          className="delete-button"
+          onClick={() => this.props.handleDeleteItems(this.props.id, subtotal)}
+        >
+          <i className="far fa-trash-alt" id="delete-logo"></i>
+        </button>
         <span className="item-name">{name}</span>
-        <span className="item-price">{price} Php</span>
+        <span className="item-price">{price.toLocaleString()} Php</span>
         <div className="item-change-quantity">
           <button
             className="decrement"
@@ -58,7 +64,7 @@ class ShoppingItems extends Component {
             +
           </button>
         </div>
-        <span className="item-subtotal">{subtotal} Php</span>
+        <span className="item-subtotal">{subtotal.toLocaleString()} Php</span>
       </div>
     );
   }

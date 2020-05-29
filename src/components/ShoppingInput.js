@@ -11,6 +11,7 @@ class ShoppingInput extends Component {
 
     this.handleProduct = this.handleProduct.bind(this);
     this.handlePrice = this.handlePrice.bind(this);
+    this.handleInputVerification = this.handleInputVerification.bind(this);
   }
 
   handleProduct(e) {
@@ -25,16 +26,27 @@ class ShoppingInput extends Component {
     });
   }
 
+  handleInputVerification(product, price) {
+    if (
+      product === undefined ||
+      product === "" ||
+      price === undefined ||
+      price === ""
+    ) {
+      alert("You have placed an empty or incorrect fields.");
+      return;
+    }
+    this.props.handleShoppingItems(product, price);
+    this.setState({ product: "", price: "" });
+  }
+
   render() {
     const { product, price } = this.state;
     return (
       <div className="ShoppingInput">
         <button
           id="add-button"
-          onClick={() => {
-            this.props.handleShoppingItems(product, price);
-            this.setState({ product: "", price: "" });
-          }}
+          onClick={() => this.handleInputVerification(product, price)}
         >
           +
         </button>

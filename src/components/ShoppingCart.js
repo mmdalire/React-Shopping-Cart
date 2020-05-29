@@ -20,6 +20,7 @@ class ShoppingCart extends Component {
 
     this.handleTotal = this.handleTotal.bind(this);
     this.handleShoppingItems = this.handleShoppingItems.bind(this);
+    this.handleDeleteItems = this.handleDeleteItems.bind(this);
   }
 
   handleTotal(total) {
@@ -39,6 +40,14 @@ class ShoppingCart extends Component {
           price: parseInt(price),
         },
       ],
+      currentId: this.state.currentId + 1,
+    });
+  }
+
+  handleDeleteItems(id, subtotal) {
+    this.setState({
+      products: this.state.products.filter((product) => product.id !== id),
+      total: this.state.total - subtotal,
     });
   }
 
@@ -46,8 +55,10 @@ class ShoppingCart extends Component {
     const products = this.state.products.map((product) => (
       <ShoppingItems
         key={product.id}
+        id={product.id}
         product={product}
         handleTotal={this.handleTotal}
+        handleDeleteItems={this.handleDeleteItems}
       />
     ));
 
